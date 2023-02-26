@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".activities.MyProfileActivity">
+
+    <FrameLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileProfile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:contentDescription="edit_photo_profile"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/baseline_person_outline_24"
+            app:civ_border_color="@color/black"
+            android:alpha="0.5"
+            app:civ_border_width="2dp" />
+
+        <ImageButton
+            android:id="@+id/ProfileEditButton"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:contentDescription="edit_photo_profile"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@null"
+            android:src="@drawable/baseline_add_a_photo_24" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/detailEtName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@color/gray"
+            android:fontFamily="sans-serif-light"
+            android:hint="Nama Lengkap"
+            android:padding="10dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Alamat Email"
+            android:textColor="@color/black"
+            android:textSize="18sp"  />
+
+        <EditText
+            android:id="@+id/detailEtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@color/gray"
+            android:fontFamily="sans-serif-light"
+            android:hint="Alamat Email"
+            android:padding="10dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/detailEtUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/dGray1"
+            android:text="UPDATE PROFILE" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
